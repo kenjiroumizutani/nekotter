@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ねこったー</title>
+  </head>
+  <body>
+    <header>
+      <h1>ねこったー</h1>
+    </header>
+    <div class="newbutton">
+         <a href="/tweets/new" class="btn-square-pop"> 新規投稿</a><br>
+    </div>
+
+    <div class="contents">
+      <% @tweets.each do |tweet| %>
+<!--        <form class="clearfix">
+        <%= image_tag 'cat1' %>
+        <textarea rows="4" cols="40"></textarea>
+        <div class="button-box">
+          <input type="submit">
+        </div>
+      </form> -->
+      <div class="message clearfix">
+        <%= image_tag 'cat1' %>
+        <div class="message_box">
+          <p class="user_name">
+            <%= tweet.name %>
+            <!-- <span class="time">・8月13日</span> -->
+          <p>
+          <p class="text">
+            <%= tweet.text %>
+          </p>
+        </div>
+      </div>
+      <% end %>
+      
+      </div>
+    </div>
+  </body>
+</html>
